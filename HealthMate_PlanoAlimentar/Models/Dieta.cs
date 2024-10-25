@@ -27,15 +27,19 @@ namespace HealthMate_PlanoAlimentar.Models
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Alergia { get; set; }
+        [Display(Name = "Alergia Alimentar?")]
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Restricao { get; set; }
+        [Display(Name = "Restrição Alimentar?")]
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string CondSaude { get; set; }
+        [Display(Name = "Condição de Saúde")]
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string UsoMedicamento { get; set; }
+        [Display(Name = "Faz uso de medicamento? Qual?")]
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Objetivo { get; set; }

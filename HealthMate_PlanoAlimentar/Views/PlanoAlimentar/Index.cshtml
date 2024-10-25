@@ -1,0 +1,89 @@
+﻿@model IEnumerable<HealthMate_PlanoAlimentar.Models.Dieta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Dietas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Adicionar nova Dieta</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Altura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alergia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CondSaude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsoMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alergia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CondSaude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsoMedicamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Visualizar</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
